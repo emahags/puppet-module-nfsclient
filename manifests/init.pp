@@ -77,8 +77,8 @@ class nfsclient (
   }
 
   if $gss_real {
-    include rpcbind
-    include nfs::idmap
+    include ::rpcbind
+    include ::nfs::idmap
 
     file_line { 'NFS_SECURITY_GSS':
       path   => '/etc/sysconfig/nfs',
